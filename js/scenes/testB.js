@@ -1,0 +1,28 @@
+FD.test({
+  id: 'testB',
+  part: 'B',
+  Q: [
+    ['colour', 'What is <b>monochrome</b>?', ['Using a range of shades of one colour', 'Using a range of shades of grey', 'Using red and green', 'Using no colour at all'], 'Greyscale uses shades of grey.', 'colour'],
+    ['colour', 'A poster for a children’s fun day should use colours that…', ['convey fun and excitement', 'suggest mystery and fear', 'are all shades of grey', 'have no contrast'], 'Consider the purpose and audience.', 'colour'],
+    ['colour', 'Colours next to each other on the colour wheel are…', ['analogous', 'complementary', 'split-complementary', 'high contrast'], 'They work well for a theme.', 'colour'],
+    ['colour', 'Split-complementary colours are…', ['one colour plus the two colours analogous to its complement', 'two colours next to each other', 'shades of grey', 'red and green only'], 'They provide more choice of colours.', 'colour'],
+    ['access', 'What is <b>contrast</b>?', ['The degree of difference between the light and dark parts of an image', 'The size of the text', 'The number of colours used', 'A type of font'], 'Text must contrast with its background.', 'access'],
+    ['access', 'Which combination should be avoided for colour-blind users?', ['Red and green', 'Navy and white', 'Black and white', 'Blue and yellow text with symbols'], 'Many colour-blind people cannot distinguish them.', 'access'],
+    ['checking', 'A spell checker set to US English flags “aluminium”. What should you do?', ['Set the spell checker to English (UK)', 'Change it to “aluminum”', 'Delete the word', 'Ignore all errors'], 'Select the correct language for your spell checker.', 'checking'],
+    ['checking', '“Their going to the park” contains which kind of error?', ['A contextual error', 'A spelling error', 'A pagination error', 'A layout error'], 'The word is spelled correctly but used in the wrong context.', 'checking'],
+    ['checking', 'Why must you proofread, even after using a spell checker?', ['Automated tools will not always find every error', 'Spell checkers change the font', 'Spell checkers delete images', 'Proofreading makes the file smaller'], 'They may also suggest changes you disagree with.', 'checking'],
+    ['review', 'Regularly checking a product against the requirements and improving it is called…', ['iterative development', 'pagination', 'branding', 'validation'], 'It lets you be critical throughout the process.', 'review'],
+    ['review', 'The task says “SAVE the document as TASK A1”. The file is saved as “TASK A”. The requirement is…', ['not met', 'met', 'partly met', 'not important'], 'Compare carefully with each requirement.', 'review'],
+    ['improve', 'In Figure 13.22, why was the legend unnecessary?', ['There was only one set of data, so a key adds nothing', 'It was the wrong colour', 'It was too large', 'Legends are never allowed'], 'Suggested improvement: remove legend.', 'improve'],
+    ['improve', 'Which change made it clear what the income values meant?', ['Adding currency (£) to the axis', 'Removing the axis labels', 'Making the bars pink', 'Removing a month'], 'It was not clear what currency the income was in.', 'improve'],
+    ['evaluation', '“Did you consider using alternative applications?” is a question about…', ['selecting the application software', 'using the application software', 'house style', 'proofreading'], 'Also: what criteria did you use?', 'evaluation'],
+    ['evaluation', 'Which is a key point for writing an evaluation?', ['Be honest about your own work', 'Only describe how long it took', 'Say your work cannot be improved', 'Avoid asking others for feedback'], 'Saying what needs improving shows understanding.', 'evaluation'],
+  ],
+  LONG: [
+    { q: 'Identify <b>three</b> errors in this text: <span class="mono">How was I suposed two know Mr Singh.</span> <small>(Chapter question 4)</small>', m: 3, s: ['‘suposed’ should be ‘supposed’ (spelling) (1).', '‘two’ should be ‘to’ (contextual error) (1).', 'The full stop should be a question mark (1).'], link: ['checking', 'See checking content again'] },
+    { q: 'Using the colour wheel, identify and state the name of the colour that contrasts most with red. <small>(Chapter question 8)</small>', m: 1, s: ['Green (the colour opposite red on the colour wheel) (1).'], link: ['colour', 'See the colour wheel again'] },
+    { q: 'State <b>one</b> accessibility need relating to the use of colour in product designs. <small>(Chapter question 9)</small>', m: 1, s: ['One from: enough contrast between text and background / do not use red and green together (colour-blindness) / do not use colour as the only way to give information / check what people with colour-blindness (e.g. protanopia) will see (1).'], link: ['access', 'See accessibility again'] },
+    { q: 'State why it is important to proofread your work to check for errors. <small>(Chapter question 10)</small>', m: 1, s: ['Automated checking tools will not always find every error (e.g. contextual errors, wrong facts) / the spell checker may suggest changes you disagree with (1).'], link: ['checking', 'See proofreading again'] },
+    { q: 'A student made a bar chart of monthly income. Identify <b>two</b> weaknesses a reviewer might find and suggest an improvement for each.', m: 4, s: ['Weakness, e.g. title is too small / it is not clear what currency the income is in / it is not clear which year / unnecessary legend / unnecessary axis labels (1 each, max 2).', 'Matching improvement, e.g. increase title size / add currency / add year to title / remove legend / remove axis labels (1 each, max 2).'], link: ['improve', 'See strengths and weaknesses again'] },
+  ],
+});

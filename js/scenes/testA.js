@@ -1,0 +1,28 @@
+FD.test({
+  id: 'testA',
+  part: 'A',
+  Q: [
+    ['software', 'Which application is most appropriate for <b>entering, editing and searching data</b>?', ['Database management', 'Presentation', 'Graphics', 'Web authoring'], 'Database management software also produces reports.', 'software'],
+    ['software', 'A teacher wants to work out grades from test percentages and draw a chart. Which application?', ['Spreadsheet', 'Word processor', 'Web authoring', 'Graphics'], 'Spreadsheets perform calculations and produce graphs and charts.', 'software'],
+    ['data', 'What is <b>information</b>?', ['Data that has been processed to be given context and meaning', 'Raw, unprocessed numbers', 'Any sound file', 'A list of characters'], 'Data is meaningless until it is processed.', 'data'],
+    ['data', 'Which is an example of <b>information</b>?', ['The warmest month in Kenya is February', '59, 79, 81, 90', 'February', 'Deep Thought'], 'It has context and meaning.', 'data'],
+    ['types', 'Which one of these data types is used to store a <b>photograph</b>? <small>(Chapter question 1)</small>', ['Image', 'Number', 'Text', 'Sound'], 'Image data: bitmap or vector graphics, used for logos and photographs.', 'types'],
+    ['types', 'Why is text data sometimes called <b>alphanumeric</b>?', ['It can contain both letters and numbers', 'It can only contain letters', 'It is used for calculations', 'It is stored as sound'], 'Numeric data cannot contain text.', 'types'],
+    ['types', 'How is meaning produced from <b>sound data</b>?', ['A digital-to-analogue converter on a sound card and a speaker', 'A spell checker', 'A bar chart', 'Semiotics only'], 'Similar sounds may need extra text, video or images.', 'types'],
+    ['process', 'In a database, <b>queries</b> and <b>validation</b> are used at which stage?', ['Refine', 'Enter', 'Organise', 'Format'], 'See Table 13.3.', 'process'],
+    ['process', 'What is <b>pagination</b>?', ['Giving a number to each page of a document', 'Sorting data', 'Adding a transition', 'Adding layers'], 'An organising feature of a word processor.', 'process'],
+    ['layout', 'What is <b>white space</b>?', ['The part of a page or digital product that is left blank', 'A white background colour only', 'A type of font', 'An empty file'], 'Too much or too little causes problems.', 'layout'],
+    ['layout', 'Too little white space makes a product…', ['look too full and confusing', 'look empty', 'load faster', 'easier to read'], 'Too much makes it look empty, with assets isolated.', 'layout'],
+    ['house', 'What is <b>corporate identity</b>?', ['The way an organisation presents itself to the public', 'A password for a company computer', 'The address of a company', 'A legal licence'], 'A house style maintains it.', 'house'],
+    ['house', 'What is <b>branding</b>?', ['The distinctive design that identifies an organisation and its products', 'The price of a product', 'A spell-checking tool', 'A database report'], 'Organisations are often very specific about how it is used.', 'house'],
+    ['fonts', 'Which is a <b>sans serif</b> font?', ['Verdana', 'Times New Roman', 'Georgia', 'Garamond'], '‘Sans’ means ‘without’ in French.', 'fonts'],
+    ['fonts', 'Choosing a font because it looks beautiful is a choice based on…', ['aesthetics', 'validation', 'pagination', 'semiotics'], 'Aesthetics is the study of visual beauty.', 'fonts'],
+  ],
+  LONG: [
+    { q: 'Explain <b>one</b> reason why it is important to use white space well when designing a digital product. <small>(Chapter question 2)</small>', m: 2, s: ['A reason, e.g. too much white space makes the product look empty / too little makes it look too full and confusing (1).', 'Expansion, e.g. so digital assets are not isolated / so information is not packed too tightly and is easy to read (1).'], link: ['layout', 'See white space again'] },
+    { q: 'State <b>one</b> type of data and describe how it can be turned into information. <small>(Chapter question 3)</small>', m: 2, s: ['A type of data: text / numbers / images / animation / sound (1).', 'How it becomes information, e.g. text: the syntax used; numbers: graphs and charts; images: surrounding information, informative text, metaphor, semiotics; animation: storytelling, surrounding information; sound: a DAC and speaker, or extra text/images (1).', 'Accept: by giving it context, e.g. marks → students’ marks → grades.'], link: ['types', 'See types of data again'] },
+    { q: 'Explain why using a house style can improve finished products when multiple documents are created for one organisation. <small>(Chapter question 5)</small>', m: 2, s: ['All documents follow the same layout, colours, fonts and logo position, so they are consistent (1)…', '…so the organisation’s corporate identity is maintained and its products are immediately recognisable (1).'], link: ['house', 'See house styles again'] },
+    { q: 'State what is meant by the term ‘serif font’. <small>(Chapter question 6)</small>', m: 1, s: ['A typeface that adds a short, flat line (a serif) to the ends of some letters (1).'], link: ['fonts', 'See serif fonts again'] },
+    { q: 'State <b>one</b> drawback of using serif fonts on devices with low-resolution screens. <small>(Chapter question 7)</small>', m: 1, s: ['The screen may not be able to show the detail of the serifs, so the text is more difficult to read (1).'], link: ['fonts', 'See low-resolution screens again'] },
+  ],
+});
