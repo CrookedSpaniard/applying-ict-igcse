@@ -114,7 +114,7 @@ FD.add({
     $('#numIn').addEventListener('input', (e) => checkNum(e.target.value));
     async function chart() {
       const V = [12, 30, 18, 42], L = ['Mon', 'Tue', 'Wed', 'Thu'];
-      $('#chart').innerHTML = `<line x1="24" y1="92" x2="214" y2="92" class="ty-ax"/>` + V.map((v, i) => `<rect x="${36 + i * 45}" y="92" width="30" height="0" class="ty-bar" data-h="${v * 1.9}"/><text x="${51 + i * 45}" y="106" class="svg-lbl svg-sm">${L[i]}</text><text x="${51 + i * 45}" y="${86 - v * 1.9}" class="svg-lbl svg-sm ty-v" opacity="0">${v}</text>`).join('');
+      $('#chart').innerHTML = `<line x1="24" y1="92" x2="214" y2="92" class="ty-ax"/>` + V.map((v, i) => `<rect x="${36 + i * 45}" y="92" width="30" height="0" class="ty-bar" data-h="${v * 1.7}"/><text x="${51 + i * 45}" y="106" class="svg-lbl svg-sm">${L[i]}</text><text x="${51 + i * 45}" y="${86 - v * 1.7}" class="svg-lbl svg-sm ty-v" opacity="0">${v}</text>`).join('');
       const bars = [...$('#chart').querySelectorAll('.ty-bar')], vals = [...$('#chart').querySelectorAll('.ty-v')];
       await FD.tween(800, (t) => bars.forEach((b) => { const h = +b.dataset.h * t; b.setAttribute('height', h); b.setAttribute('y', 92 - h); }));
       vals.forEach((v) => v.setAttribute('opacity', 1));

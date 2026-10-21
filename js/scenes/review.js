@@ -25,7 +25,7 @@ FD.add({
         <div data-panel="cycle" class="sim">
           <svg viewBox="0 0 480 222" class="rv-cyc" role="img" aria-label="The iterative development cycle">
             <circle cx="240" cy="111" r="68" class="rv-ring"/>
-            ${STAGES.map(([e, t], i) => { const [x, y] = [[240, 20], [390, 111], [240, 202], [90, 111]][i]; return `<g class="rv-st" data-i="${i}"><rect x="${x - 86}" y="${y - 17}" width="172" height="34" rx="10"/><text x="${x}" y="${y + 4}" class="svg-lbl svg-sm">${e} ${t}</text></g>`; }).join('')}
+            ${STAGES.map(([e, t], i) => { const [x, y] = [[240, 20], [390, 111], [240, 202], [90, 111]][i]; const w = t.split(' '), h = Math.ceil(w.length / 2); return `<g class="rv-st" data-i="${i}"><rect x="${x - 86}" y="${y - 18}" width="172" height="36" rx="10"/><text x="${x}" y="${y - 3}" class="svg-lbl svg-sm"><tspan x="${x}">${e} ${w.slice(0, h).join(' ')}</tspan><tspan x="${x}" dy="12">${w.slice(h).join(' ')}</tspan></text></g>`; }).join('')}
             <circle id="tok" r="8" class="rv-tok" cx="240" cy="43"/>
             <text x="240" y="106" class="svg-lbl">Round</text><text x="240" y="128" class="svg-lbl rv-n" id="rnd">1</text>
           </svg>
