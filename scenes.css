@@ -361,7 +361,7 @@ canvas { display: block; max-width: 100%; height: auto; }
 .ck-spot { font-size: 1.1rem; }
 
 /* ---------- 11 review ---------- */
-.rv-cyc { max-width: 30rem; margin: 0 auto; }
+.rv-cyc { max-width: 34rem; margin: 0 auto; }
 .rv-ring { fill: none; stroke: var(--line); stroke-width: 3; stroke-dasharray: 6 6; }
 .rv-st rect { fill: var(--surface); stroke: var(--line); stroke-width: 1.4; transition: fill .3s, stroke .3s; }
 .rv-st.on rect { fill: color-mix(in srgb, var(--scene) 18%, var(--surface)); stroke: var(--scene); stroke-width: 2.4; }

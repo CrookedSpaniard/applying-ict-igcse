@@ -23,11 +23,11 @@ FD.add({
           <button data-p="cycle">🔁 Iterative development</button><button data-p="task">📋 Task A1</button>
         </div>
         <div data-panel="cycle" class="sim">
-          <svg viewBox="0 0 420 222" class="rv-cyc" role="img" aria-label="The iterative development cycle">
-            <circle cx="210" cy="111" r="68" class="rv-ring"/>
-            ${STAGES.map(([e, t], i) => { const [x, y] = [[210, 20], [342, 111], [210, 202], [78, 111]][i]; return `<g class="rv-st" data-i="${i}"><rect x="${x - 72}" y="${y - 17}" width="144" height="34" rx="10"/><text x="${x}" y="${y + 4}" class="svg-lbl svg-sm">${e} ${t}</text></g>`; }).join('')}
-            <circle id="tok" r="8" class="rv-tok" cx="210" cy="43"/>
-            <text x="210" y="106" class="svg-lbl">Round</text><text x="210" y="128" class="svg-lbl rv-n" id="rnd">1</text>
+          <svg viewBox="0 0 480 222" class="rv-cyc" role="img" aria-label="The iterative development cycle">
+            <circle cx="240" cy="111" r="68" class="rv-ring"/>
+            ${STAGES.map(([e, t], i) => { const [x, y] = [[240, 20], [390, 111], [240, 202], [90, 111]][i]; return `<g class="rv-st" data-i="${i}"><rect x="${x - 86}" y="${y - 17}" width="172" height="34" rx="10"/><text x="${x}" y="${y + 4}" class="svg-lbl svg-sm">${e} ${t}</text></g>`; }).join('')}
+            <circle id="tok" r="8" class="rv-tok" cx="240" cy="43"/>
+            <text x="240" y="106" class="svg-lbl">Round</text><text x="240" y="128" class="svg-lbl rv-n" id="rnd">1</text>
           </svg>
           <div class="chk-btns"><button class="btn primary" id="bLoop">▶ Go round once</button><button class="btn ghost" id="bFinal">🏁 Final review</button></div>
           <p class="verdict" id="cMsg"></p>
@@ -54,7 +54,7 @@ FD.add({
     let dead = false, round = 1, busy = false;
     const doc = { orient: 'portrait', footer: 'Task A | Candidate name | Candidate number 0000 | Centre number 000', file: 'TASK A' };
 
-    const pos = (i) => { const a = (i * Math.PI) / 2 - Math.PI / 2; return [210 + 68 * Math.cos(a), 111 + 68 * Math.sin(a)]; };
+    const pos = (i) => { const a = (i * Math.PI) / 2 - Math.PI / 2; return [240 + 68 * Math.cos(a), 111 + 68 * Math.sin(a)]; };
     function hi(i) { root.querySelectorAll('.rv-st').forEach((g) => g.classList.toggle('on', +g.dataset.i === i)); }
     async function loop() {
       if (busy) return; busy = true;
@@ -62,7 +62,7 @@ FD.add({
         hi(i);
         $('#cMsg').className = 'verdict'; $('#cMsg').innerHTML = `Round ${round}: ${STAGES[i][1].toLowerCase()}.`;
         const a0 = (i * Math.PI) / 2 - Math.PI / 2;
-        await FD.tween(700, (t) => { if (dead) return; const a = a0 + (t * Math.PI) / 2; $('#tok').setAttribute('cx', 210 + 68 * Math.cos(a)); $('#tok').setAttribute('cy', 111 + 68 * Math.sin(a)); });
+        await FD.tween(700, (t) => { if (dead) return; const a = a0 + (t * Math.PI) / 2; $('#tok').setAttribute('cx', 240 + 68 * Math.cos(a)); $('#tok').setAttribute('cy', 111 + 68 * Math.sin(a)); });
         if (dead) return;
       }
       round++; $('#rnd').textContent = round; hi(-1); busy = false;
@@ -118,7 +118,7 @@ FD.add({
     $('#save').addEventListener('keydown', (e) => { if (e.key === 'Enter') saveAs(e.target.value || doc.file); });
 
     function reset() {
-      round = 1; busy = false; $('#rnd').textContent = 1; hi(-1); $('#tok').setAttribute('cx', 210); $('#tok').setAttribute('cy', 43); $('#cMsg').innerHTML = '';
+      round = 1; busy = false; $('#rnd').textContent = 1; hi(-1); $('#tok').setAttribute('cx', 240); $('#tok').setAttribute('cy', 43); $('#cMsg').innerHTML = '';
       Object.assign(doc, { orient: 'portrait', footer: 'Task A | Candidate name | Candidate number 0000 | Centre number 000', file: 'TASK A' });
       marked = false; edited = false; $('#score').innerHTML = '';
       root.querySelectorAll('.rv-list li').forEach((li) => { li.className = ''; li.querySelector('em').textContent = ''; FD.segSet(li.querySelector('.rv-ans'), ''); });

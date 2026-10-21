@@ -45,7 +45,7 @@ FD.add({
           ${k >= 2 ? `<tr class="tot"><th>6</th><td>Total</td><td class="n" title="=SUM(B2:B5)">${money(total)}</td></tr>` : ''}
         </tbody></table>
         ${k >= 2 ? `<div class="pc-formula mono">B6: =SUM(B2:B5)</div>` : ''}
-        ${k >= 2 ? `<svg viewBox="0 0 200 120" class="pc-chart">${k >= 3 ? '<text x="100" y="12" class="svg-lbl svg-sm">Cake sales, Jan–Apr</text>' : ''}<line x1="20" y1="100" x2="195" y2="100" class="ty-ax"/>${rows.map((r, i) => `<rect x="${30 + i * 42}" y="${100 - (r[1] / max) * 78}" width="28" height="${(r[1] / max) * 78}" class="ty-bar"/><text x="${44 + i * 42}" y="113" class="svg-lbl svg-sm">${r[0]}</text>${k >= 3 ? `<text x="${44 + i * 42}" y="${96 - (r[1] / max) * 78}" class="svg-lbl svg-sm">${money(r[1])}</text>` : ''}`).join('')}</svg>` : ''}
+        ${k >= 2 ? `<svg viewBox="0 0 200 120" class="pc-chart">${k >= 3 ? '<text x="100" y="12" class="svg-lbl svg-sm">Cake sales, Jan–Apr</text>' : ''}<line x1="20" y1="100" x2="195" y2="100" class="ty-ax"/>${rows.map((r, i) => `<rect x="${30 + i * 42}" y="${100 - (r[1] / max) * 66}" width="28" height="${(r[1] / max) * 66}" class="ty-bar"/><text x="${44 + i * 42}" y="113" class="svg-lbl svg-sm">${r[0]}</text>${k >= 3 ? `<text x="${44 + i * 42}" y="${96 - (r[1] / max) * 66}" class="svg-lbl svg-sm">${money(r[1])}</text>` : ''}`).join('')}</svg>` : ''}
       </div>`;
     }
     function wpDemo(k) {
